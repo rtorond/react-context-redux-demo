@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { CountContext } from "../CountState";
+import React from "react";
 
-export default () => {
-  const { increment } = useContext(CountContext);
-  return <button onClick={increment}>increment</button>;
-};
+export default ({increment}) => (
+    <button onClick={increment} className="btn-floating btn-large waves-effect waves-light blue">
+        <i className="material-icons left">add</i>
+    </button>
+);

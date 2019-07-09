@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { CountContext } from "../CountState";
+import React from "react";
 
-export default () => {
-  const { decrement } = useContext(CountContext);
-  return <button onClick={decrement}>decrement</button>;
-};
+export default ({decrement}) => (
+    <button onClick={decrement} className="btn-floating btn-large waves-effect waves-light red">
+        <i className="material-icons left">remove</i>
+    </button>
+);

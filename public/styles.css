@@ -1,0 +1,93 @@
+body {
+    background-color: #dbdbdb;
+}
+
+.brand-logo {
+    padding-left: 10px;
+}
+
+.main-content {
+    margin: 10px auto;
+    max-width: 1000px;
+}
+
+.animals-container {
+    border: 4px dashed #000000;
+    padding: 20px;
+    background-color: #5d9a1d;
+}
+
+.animal-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+}
+
+.count {
+    font-size: 2rem;
+}
+
+#cats_0 {
+    background-image: url("./cats/0.jpeg");
+}
+#cats_1 {
+    background-image: url("./cats/1.jpeg");
+}
+#cats_2 {
+    background-image: url("./cats/2.jpeg");
+}
+#cats_3 {
+    background-image: url("./cats/3.png");
+}
+#cats_4 {
+    background-image: url("./cats/4.jpeg");
+}
+#cats_5 {
+    background-image: url("./cats/5.jpeg");
+}
+#cats_6 {
+    background-image: url("./cats/6.jpeg");
+}
+#cats_7 {
+    background-image: url("./cats/7.jpeg");
+}
+#cats_8 {
+    background-image: url("./cats/8.jpeg");
+}
+#cats_9 {
+    background-image: url("./cats/9.jpeg");
+}
+
+
+#dogs_0 {
+    background-image: url("./dogs/0.jpg");
+}
+#dogs_1 {
+    background-image: url("./dogs/1.jpg");
+}
+#dogs_2 {
+    background-image: url("./dogs/2.jpg");
+}
+#dogs_3 {
+    background-image: url("./dogs/3.jpg");
+}
+#dogs_4 {
+    background-image: url("./dogs/4.jpg");
+}
+#dogs_5 {
+    background-image: url("./dogs/5.jpg");
+}
+#dogs_6 {
+    background-image: url("./dogs/6.jpg");
+}
+#dogs_7 {
+    background-image: url("./dogs/7.jpg");
+}
+#dogs_8 {
+    background-image: url("./dogs/8.jpg");
+}
+#dogs_9 {
+    background-image: url("./dogs/9.jpg");
+}

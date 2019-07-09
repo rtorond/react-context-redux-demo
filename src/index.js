@@ -1,14 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Counter from "./counter";
-
-const App = () => (
-  <>
-    <Counter />
-    <Counter />
-    <Counter />
-  </>
-);
+import {App} from "./App";
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+
+ReactDOM.render(<App/>, rootElement);
