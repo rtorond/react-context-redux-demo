@@ -27,22 +27,4 @@ export const Appbar = ({preference, togglePreference}) => (
     </nav>
 );
 
-
-const connector = connect(
-    (state) => {
-        return {
-            preference: state.preference
-        };
-    },
-    (dispatch) => {
-        return {
-            togglePreference: () => dispatch({
-                type: 'TOGGLE_PREFERENCE'
-            }),
-        };
-    }
-);
-
-const ConnectedAppbar = connector(Appbar);
-
-export default ConnectedAppbar;
+export default Appbar;

@@ -16,15 +16,4 @@ export const Animals = ({count, preference }) => (
     </div>
 );
 
-const connector = connect(
-    (state) => {
-        return {
-            count: state.count,
-            preference: state.preference
-        };
-    },
-);
-
-const ConnectedAnimals = connector(Animals);
-
-export default ConnectedAnimals;
+export default Animals;

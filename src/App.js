@@ -1,26 +1,51 @@
 import Counter from "./counter/Counter";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Animals from "./animals/Animals";
 import Appbar from "./appbar/Appbar";
 
-export const App = () => (
-    <div className="counter-app">
+export const CATS = 'cats';
+export const DOGS = 'dogs';
 
-        <Appbar/>
+export const App = () => {
+    const [count, setCount] = useState(0);
+    const [preference, setPreference] = useState(CATS);
 
-        <div className="main-content">
-            <div className="row">
-                <div className="col m3 ">
+    useEffect(
+        () => {
+            setCount(0);
+        },
+        [preference]
+    );
 
-                    <Counter/>
+    const increment = () => setCount(count + 1);
+    const decrement = () => setCount(count - 1);
 
-                </div>
-                <div className="col m9">
+    const togglePreference = () => setPreference(preference === CATS ? DOGS : CATS);
 
-                    <Animals/>
+    return (
+        <div className="counter-app">
 
+            <Appbar preference={preference} togglePreference={togglePreference}/>
+
+            <div className="main-content">
+                <div className="row">
+                    <div className="col m3 ">
+
+                        <Counter
+                            count={count}
+                            setCount={setCount}
+                            increment={increment}
+                            decrement={decrement}
+                        />
+
+                    </div>
+                    <div className="col m9">
+
+                        <Animals count={count} preference={preference}/>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-);
+    );
+};

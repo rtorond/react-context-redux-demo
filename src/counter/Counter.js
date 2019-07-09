@@ -25,24 +25,13 @@ const Counter = ({ count, increment, decrement }) => (
     </div>
 );
 
-const connector = connect(
-    (state) => {
-        return {
-            count: state.count
-        };
-    },
-    (dispatch) => {
-        return {
-            increment: () => dispatch({
-                type: 'INCREMENT'
-            }),
-            decrement: () => dispatch({
-                type: 'DECREMENT'
-            })
-        };
-    }
-);
+export default Counter;
 
-const ConnectedCounter = connector(Counter);
-
-export default ConnectedCounter;
+// connect(
+//     (state) => {
+//         return {};
+//     },
+//     (dispatch) => {
+//         return {};
+//     }
+// );
