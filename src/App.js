@@ -14,7 +14,7 @@ export const App = () => {
 
             <div className="main-content">
                 <div className="row">
-                    <div className="col m3 ">
+                    <div className="col m3">
 
                         <Counter/>
 

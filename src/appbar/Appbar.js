@@ -3,17 +3,17 @@ import React from "react";
 export const Appbar = ({ togglePreference }) => (
     <nav>
         <div className="nav-wrapper">
-            <a href="#" className="brand-logo">Funny animals counter</a>
+            <span className="brand-logo">Funny animals counter</span>
             <ul className="right">
                 <li>
-                    <a className="waves-effect waves-light btn" onClick={togglePreference}>
-                        I love Cats 🐱 ❤!
-                    </a>
+                    <button className="waves-effect waves-light btn" onClick={togglePreference}>
+                        I love Cats <span role="img" aria-label="cat">🐱</span> ❤!
+                    </button>
                 </li>
                 <li>
-                    <a className="waves-effect waves-light btn" onClick={togglePreference}>
-                        I love Dogs 🐶 ❤ !
-                    </a>
+                    <button className="waves-effect waves-light btn" onClick={togglePreference}>
+                        I love Dogs <span role="img" aria-label="dog">🐶</span> ❤ !
+                    </button>
                 </li>
             </ul>
         </div>
