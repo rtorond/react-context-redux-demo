@@ -1,14 +1,15 @@
 import React from "react";
 import {connect} from "react-redux";
-import {DOGS} from "../store";
+import {isDogLover} from "../store/preference/selectors";
+import {togglePreference} from "../store/preference/actions";
 
-export const Appbar = ({preference, togglePreference}) => (
+export const Appbar = ({isDogLover, togglePreference}) => (
     <nav>
         <div className="nav-wrapper">
             <span className="brand-logo">Funny animals counter</span>
             <ul className="right">
                 {
-                    preference === DOGS ? (
+                    isDogLover ? (
                         <li>
                             <button className="waves-effect waves-light btn" onClick={togglePreference}>
                                 I love Cats <span role="img" aria-label="cat">🐱</span> ❤!
@@ -29,17 +30,11 @@ export const Appbar = ({preference, togglePreference}) => (
 
 
 const connector = connect(
-    (state) => {
-        return {
-            preference: state.preference
-        };
-    },
-    (dispatch) => {
-        return {
-            togglePreference: () => dispatch({
-                type: 'TOGGLE_PREFERENCE'
-            }),
-        };
+    (state) => ({
+        isDogLover: isDogLover(state)
+    }),
+    {
+        togglePreference,
     }
 );
 
