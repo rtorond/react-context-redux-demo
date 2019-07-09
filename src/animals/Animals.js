@@ -6,10 +6,10 @@ export const Animals = ({count, preference }) => (
         <div className="row">
             {count > 0 ? (
                 [...Array(count)].map((_, number) => (
-                    <Animal number={number} preference={preference} />
+                    <Animal key={number} number={number} preference={preference} />
                 ))
             ): (
-                <div className="col">Nothing to display :'(</div>
+                <div className="col">Nothing to display :'( increment to show {preference}!</div>
             )}
         </div>
     </div>
