@@ -1,23 +1,24 @@
 import React from "react";
-import {DOGS} from "../App";
+import {connect} from "react-redux";
+import {DOGS} from "../store";
 
 export const Appbar = ({preference, togglePreference}) => (
     <nav>
         <div className="nav-wrapper">
-            <a href="#" className="brand-logo">Funny animals counter</a>
+            <span className="brand-logo">Funny animals counter</span>
             <ul className="right">
                 {
                     preference === DOGS ? (
                         <li>
-                            <a className="waves-effect waves-light btn" onClick={togglePreference}>
-                                I love Cats 🐱 ❤!
-                            </a>
+                            <button className="waves-effect waves-light btn" onClick={togglePreference}>
+                                I love Cats <span role="img" aria-label="cat">🐱</span> ❤!
+                            </button>
                         </li>
                     ) : (
                         <li>
-                            <a className="waves-effect waves-light btn" onClick={togglePreference}>
-                                I love Dogs 🐶 ❤ !
-                            </a>
+                            <button className="waves-effect waves-light btn" onClick={togglePreference}>
+                                I love Dogs <span role="img" aria-label="dog">🐶</span> ❤ !
+                            </button>
                         </li>
                     )
                 }
@@ -25,3 +26,23 @@ export const Appbar = ({preference, togglePreference}) => (
         </div>
     </nav>
 );
+
+
+const connector = connect(
+    (state) => {
+        return {
+            preference: state.preference
+        };
+    },
+    (dispatch) => {
+        return {
+            togglePreference: () => dispatch({
+                type: 'TOGGLE_PREFERENCE'
+            }),
+        };
+    }
+);
+
+const ConnectedAppbar = connector(Appbar);
+
+export default ConnectedAppbar;

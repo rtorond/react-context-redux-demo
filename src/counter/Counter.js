@@ -1,8 +1,9 @@
 import IncrementButton from "./buttons/Increment";
 import DecrementButton from "./buttons/Decrement";
 import React from "react";
+import {connect} from "react-redux";
 
-export default ({count, increment, decrement}) => (
+const Counter = ({ count, increment, decrement }) => (
     <div className="card counter">
         <div className="card-content count">
 
@@ -23,3 +24,25 @@ export default ({count, increment, decrement}) => (
         </div>
     </div>
 );
+
+const connector = connect(
+    (state) => {
+        return {
+            count: state.count
+        };
+    },
+    (dispatch) => {
+        return {
+            increment: () => dispatch({
+                type: 'INCREMENT'
+            }),
+            decrement: () => dispatch({
+                type: 'DECREMENT'
+            })
+        };
+    }
+);
+
+const ConnectedCounter = connector(Counter);
+
+export default ConnectedCounter;

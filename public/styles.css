@@ -11,6 +11,10 @@ body {
     max-width: 1000px;
 }
 
+.nav-wrapper {
+    padding: 0 20px;
+}
+
 .animals-container {
     border: 4px dashed #000000;
     padding: 20px;
