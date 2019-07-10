@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Appbar = ({ togglePreference }) => (
+const Appbar = ({ togglePreference }) => (
     <nav>
         <div className="nav-wrapper">
             <span className="brand-logo">Funny animals counter</span>
@@ -19,3 +19,5 @@ export const Appbar = ({ togglePreference }) => (
         </div>
     </nav>
 );
+
+export default Appbar;

@@ -2,7 +2,7 @@ import IncrementButton from "./buttons/Increment";
 import DecrementButton from "./buttons/Decrement";
 import React, {useState} from "react";
 
-export default () => {
+const Counter = () => {
     return (
         <div className="card counter">
             <div className="card-content count">
@@ -24,4 +24,6 @@ export default () => {
             </div>
         </div>
     );
-}
+};
+
+export default Counter;

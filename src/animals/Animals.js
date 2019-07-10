@@ -1,7 +1,7 @@
 import React from 'react';
 import {Animal} from "./animal/Animal";
 
-export const Animals = ({count}) => (
+const Animals = ({count}) => (
     <div className="card animals-container">
         <div className="row">
             {count > 0 ? (
@@ -14,3 +14,5 @@ export const Animals = ({count}) => (
         </div>
     </div>
 );
+
+export default Animals;

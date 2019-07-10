@@ -1,7 +1,7 @@
-import Counter from "./counter";
+import Counter from "./counter/Counter";
 import React, {useState, useEffect} from "react";
-import Animals from "./animals";
-import Appbar from "./appbar";
+import Animals from "./animals/Animals";
+import Appbar from "./appbar/Appbar";
 
 export const CATS = 'cats';
 export const DOGS = 'dogs';
