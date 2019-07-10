@@ -14,3 +14,5 @@ export const Animals = ({count, preference }) => (
         </div>
     </div>
 );
+
+export default Animals;

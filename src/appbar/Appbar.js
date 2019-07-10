@@ -25,3 +25,5 @@ export const Appbar = ({preference, togglePreference}) => (
         </div>
     </nav>
 );
+
+export default Appbar;
