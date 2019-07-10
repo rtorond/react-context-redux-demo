@@ -2,7 +2,7 @@ import IncrementButton from "./buttons/Increment";
 import DecrementButton from "./buttons/Decrement";
 import React from "react";
 
-export default ({count, increment, decrement}) => (
+const Counter = ({count, increment, decrement}) => (
     <div className="card counter">
         <div className="card-content count">
 
@@ -23,3 +23,5 @@ export default ({count, increment, decrement}) => (
         </div>
     </div>
 );
+
+export default Counter;
