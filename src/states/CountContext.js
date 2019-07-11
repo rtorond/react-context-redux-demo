@@ -19,4 +19,4 @@ export const CountProvider = ({ children }) => {
     );
 };
 
-export const useCountState = () => useContext(CountContext);
+export const useCount = () => useContext(CountContext);

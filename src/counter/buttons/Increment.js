@@ -1,8 +1,8 @@
 import React from "react";
-import {useCountState} from "../../states/CountContext";
+import {useCount} from "../../states/CountContext";
 
 export default () => {
-    const {increment} = useCountState();
+    const {increment} = useCount();
 
     return (
         <button onClick={increment} className="btn-floating btn-large waves-effect waves-light blue">

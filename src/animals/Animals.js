@@ -1,9 +1,13 @@
 import React from 'react';
 import {Animal} from "./animal/Animal";
-import {useCountState} from "../states/CountContext";
+import {useCount} from "../states/CountContext";
+import {usePreference} from "../states/PreferenceContext";
 
-export const Animals = ({preference }) => {
-    const { count } = useCountState();
+export const Animals = () => {
+    const { count } = useCount();
+    const { preference } = usePreference();
+
+    console.log(preference);
 
     return (
         <div className="card animals-container">
@@ -18,6 +22,6 @@ export const Animals = ({preference }) => {
             </div>
         </div>
     );
-}
+};
 
 export default Animals;
