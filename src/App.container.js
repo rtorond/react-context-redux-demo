@@ -9,6 +9,6 @@ const AppContainer = () => (
             <App/>
         </PreferenceProvider>
     </CountProvider>
-)
+);
 
 export default AppContainer;

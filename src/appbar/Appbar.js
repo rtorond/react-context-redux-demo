@@ -1,5 +1,4 @@
 import React from "react";
-import {DOGS} from "../App";
 import {usePreference} from "../states/PreferenceContext";
 
 export const Appbar = () => {
