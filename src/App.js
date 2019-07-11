@@ -1,24 +1,15 @@
 import Counter from "./counter/Counter";
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Animals from "./animals/Animals";
 import Appbar from "./appbar/Appbar";
+
+import {CountProvider} from './states/CountContext';
 
 export const CATS = 'cats';
 export const DOGS = 'dogs';
 
 export const App = () => {
-    const [count, setCount] = useState(0);
     const [preference, setPreference] = useState(CATS);
-
-    useEffect(
-        () => {
-            setCount(0);
-        },
-        [preference]
-    );
-
-    const increment = () => setCount(count + 1);
-    const decrement = () => setCount(count - 1);
 
     const togglePreference = () => setPreference(preference === CATS ? DOGS : CATS);
 
@@ -27,25 +18,22 @@ export const App = () => {
 
             <Appbar preference={preference} togglePreference={togglePreference}/>
 
-            <div className="main-content">
-                <div className="row">
-                    <div className="col m3 ">
+            <CountProvider>
+                <div className="main-content">
+                    <div className="row">
+                        <div className="col m3 ">
 
-                        <Counter
-                            count={count}
-                            setCount={setCount}
-                            increment={increment}
-                            decrement={decrement}
-                        />
+                            <Counter/>
 
-                    </div>
-                    <div className="col m9">
+                        </div>
+                        <div className="col m9">
 
-                        <Animals count={count} preference={preference}/>
+                            <Animals preference={preference}/>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </CountProvider>
         </div>
     );
 };
