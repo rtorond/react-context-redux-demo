@@ -1,9 +1,11 @@
 import React from "react";
-import {DOGS} from "../App";
-import {usePreference} from "../states/PreferenceContext";
+import {useDispatch, useSelector} from "../states/GlobalState";
 
 export const Appbar = () => {
-    const {togglePreference, isDogLover} = usePreference();
+    const {isDogLover} = useSelector();
+    const dispatch = useDispatch();
+
+    const togglePreference = () => dispatch({type: 'TOGGLE_PREFERENCE'});
 
     return (
         <nav>

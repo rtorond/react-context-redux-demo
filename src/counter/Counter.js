@@ -1,27 +1,33 @@
 import IncrementButton from "./buttons/Increment";
 import DecrementButton from "./buttons/Decrement";
 import React from "react";
+import {useSelector} from "../states/GlobalState";
 
-const Counter = ({count}) => (
-    <div className="card counter">
-        <div className="card-content count">
+const Counter = () => {
+    const {getCount} = useSelector();
+    const count = getCount();
 
-            Count = {count}
+    return (
+        <div className="card counter">
+            <div className="card-content count">
 
-        </div>
-        <div className="card-action">
+                Count = {count}
 
-            <div className="row">
-                <div className="col s6">
-                    <IncrementButton/>
-                </div>
-                <div className="col s6">
-                    <DecrementButton/>
-                </div>
             </div>
+            <div className="card-action">
 
+                <div className="row">
+                    <div className="col s6">
+                        <IncrementButton/>
+                    </div>
+                    <div className="col s6">
+                        <DecrementButton/>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-);
+    );
+}
 
 export default Counter;

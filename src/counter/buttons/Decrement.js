@@ -1,11 +1,15 @@
 import React from "react";
-import {useCount} from "../../states/CountContext";
+import {useDispatch} from "../../states/GlobalState";
 
 export default () => {
-    const {decrement} = useCount();
+    const dispatch = useDispatch();
+    const decrement = () => dispatch({type: 'DECREMENT'});
 
     return (
-        <button onClick={decrement} className="btn-floating btn-large waves-effect waves-light red">
+        <button
+            onClick={decrement}
+            className="btn-floating btn-large waves-effect waves-light red"
+        >
             <i className="material-icons left">remove</i>
         </button>
     );

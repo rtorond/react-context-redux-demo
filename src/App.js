@@ -1,4 +1,4 @@
-import Counter from "./counter/Counter.container";
+import Counter from "./counter/Counter";
 import React from "react";
 import Animals from "./animals/Animals";
 import Appbar from "./appbar/Appbar";
@@ -25,3 +25,5 @@ export const App = () => (
 
     </div>
 );
+
+export default App;
