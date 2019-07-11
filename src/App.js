@@ -33,7 +33,6 @@ export const App = () => {
 
                         <Counter
                             count={count}
-                            setCount={setCount}
                             increment={increment}
                             decrement={decrement}
                         />
