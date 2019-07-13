@@ -1,37 +1,26 @@
 import React from "react";
 import {connect} from "react-redux";
-import {DOGS} from "../store";
+import {other} from "../store";
 
-export const Appbar = ({preference, togglePreference}) => (
+export const Appbar = ({otherPreference, togglePreference}) => (
     <nav>
         <div className="nav-wrapper">
             <span className="brand-logo">Funny animals counter</span>
             <ul className="right">
-                {
-                    preference === DOGS ? (
-                        <li>
-                            <button className="waves-effect waves-light btn" onClick={togglePreference}>
-                                I love Cats <span role="img" aria-label="cat">🐱</span> ❤!
-                            </button>
-                        </li>
-                    ) : (
-                        <li>
-                            <button className="waves-effect waves-light btn" onClick={togglePreference}>
-                                I love Dogs <span role="img" aria-label="dog">🐶</span> ❤ !
-                            </button>
-                        </li>
-                    )
-                }
+                <li>
+                    <button className="waves-effect waves-light btn" onClick={togglePreference}>
+                        I love {otherPreference} <span role="img" aria-label="cat">🐱</span> ❤!
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
 );
 
-
 const connector = connect(
     (state) => {
         return {
-            preference: state.preference
+            otherPreference: other(state.preference)
         };
     },
     (dispatch) => {

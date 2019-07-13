@@ -2,6 +2,7 @@ import {createStore} from 'redux';
 
 export const CATS = 'cats';
 export const DOGS = 'dogs';
+export const other = (current) => current === CATS ? DOGS : CATS;
 
 const initialState = {
     count: 0,
@@ -22,8 +23,8 @@ const countReducer = (state = initialState, action) => {
             };
         case 'TOGGLE_PREFERENCE':
             return {
-                count: 0,
-                preference: state.preference === CATS ? DOGS : CATS
+                ...state,
+                preference: other(state.preference)
             };
         default:
             return state;
