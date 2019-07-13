@@ -10,13 +10,6 @@ export const App = () => {
     const [count, setCount] = useState(0);
     const [preference, setPreference] = useState(CATS);
 
-    useEffect(
-        () => {
-            setCount(0);
-        },
-        [preference]
-    );
-
     const increment = () => setCount(count + 1);
     const decrement = () => setCount(count - 1);
 
