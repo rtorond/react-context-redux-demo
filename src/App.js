@@ -10,7 +10,7 @@ export const App = () => {
     return (
         <div className="counter-app">
 
-            <Appbar/>
+            {/*<Appbar/>*/}
 
             <div className="main-content">
                 <div className="row">
