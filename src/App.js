@@ -5,6 +5,7 @@ import Appbar from "./appbar/Appbar";
 
 export const CATS = 'cats';
 export const DOGS = 'dogs';
+export const other = (current) => current === CATS ? DOGS : CATS;
 
 export const App = () => {
     return (
