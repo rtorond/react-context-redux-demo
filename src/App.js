@@ -1,5 +1,5 @@
 import Counter from "./counter/Counter";
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Animals from "./animals/Animals";
 import Appbar from "./appbar/Appbar";
 
@@ -9,13 +9,6 @@ export const DOGS = 'dogs';
 export const App = () => {
     const [count, setCount] = useState(0);
     const [preference, setPreference] = useState(CATS);
-
-    useEffect(
-        () => {
-            setCount(0);
-        },
-        [preference]
-    );
 
     const increment = () => setCount(count + 1);
     const decrement = () => setCount(count - 1);
