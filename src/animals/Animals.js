@@ -7,8 +7,6 @@ export const Animals = () => {
     const { count } = useCount();
     const { preference } = usePreference();
 
-    console.log(preference);
-
     return (
         <div className="card animals-container">
             <div className="row">
