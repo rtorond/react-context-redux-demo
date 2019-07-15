@@ -2,6 +2,8 @@ import IncrementButton from "./buttons/Increment";
 import DecrementButton from "./buttons/Decrement";
 import React from "react";
 
+import { CountState } from '../states/CountState';
+
 const Counter = ({count, increment, decrement}) => (
     <div className="card counter">
         <div className="card-content count">

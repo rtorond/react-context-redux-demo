@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import Animals from "./animals/Animals";
 import Appbar from "./appbar/Appbar";
 
+import { CountState } from './states/CountState';
+
 export const CATS = 'cats';
 export const DOGS = 'dogs';
 
