@@ -35,7 +35,7 @@ export const App = () => {
                     </div>
                     <div className="col m9">
 
-                        <Animals count={count} preference={preference}/>
+                        {/*<Animals count={count} preference={preference}/>*/}
 
                     </div>
                 </div>

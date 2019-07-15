@@ -1,5 +1,6 @@
 import React from 'react';
 import {Animal} from "./animal/Animal";
+import { CountState } from '../states/CountState';
 
 export const Animals = ({count, preference }) => (
     <div className="card animals-container">
