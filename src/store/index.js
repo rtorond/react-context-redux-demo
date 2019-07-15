@@ -9,7 +9,7 @@ const initialState = {
     preference: CATS
 };
 
-const countReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'INCREMENT':
             return {
@@ -31,4 +31,4 @@ const countReducer = (state = initialState, action) => {
     }
 };
 
-export const store = createStore(countReducer);
+export const store = createStore(reducer);
