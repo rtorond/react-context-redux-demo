@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 
 export const CATS = 'cats';
 export const DOGS = 'dogs';
-
 const other = (current) => current === CATS ? DOGS : CATS;
 
 const initialState = {
@@ -10,16 +9,16 @@ const initialState = {
     preference: CATS
 };
 
-const selectors = (state) => ({
-    getCount: () => state.count,
-    getPreference: () => state.preference,
-    isDogLover: () => state.preference === DOGS
-});
-
 const GlobalState = React.createContext({
     state: initialState,
     dispatch: () => {},
     selectors: {}
+});
+
+const selectors = (state) => ({
+    getCount: () => state.count,
+    getPreference: () => state.preference,
+    isDogLover: () => state.preference === DOGS
 });
 
 export const GlobalStateProvider = ({ children }) => {
