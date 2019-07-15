@@ -1,7 +1,7 @@
-import Counter from "./counter/Counter";
+import Counter from "./counter/Counter.container";
 import React from "react";
-import Animals from "./animals/Animals";
-import Appbar from "./appbar/Appbar";
+import Animals from "./animals/Animals.container";
+import Appbar from "./appbar/Appbar.container";
 
 export const App = () => (
     <div className="counter-app">

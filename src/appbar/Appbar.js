@@ -1,7 +1,4 @@
 import React from "react";
-import {connect} from "react-redux";
-import {isDogLover} from "../store/preference/selectors";
-import {togglePreference} from "../store/preference/actions";
 
 export const Appbar = ({isDogLover, togglePreference}) => (
     <nav>
@@ -28,16 +25,4 @@ export const Appbar = ({isDogLover, togglePreference}) => (
     </nav>
 );
 
-
-const connector = connect(
-    (state) => ({
-        isDogLover: isDogLover(state)
-    }),
-    {
-        togglePreference,
-    }
-);
-
-const ConnectedAppbar = connector(Appbar);
-
-export default ConnectedAppbar;
+export default Appbar;

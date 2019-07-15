@@ -1,10 +1,8 @@
-import IncrementButton from "./buttons/Increment";
-import DecrementButton from "./buttons/Decrement";
+import IncrementButton from "./buttons/Increment.container";
+import DecrementButton from "./buttons/Decrement.container";
 import React from "react";
-import {connect} from "react-redux";
-import {getCount} from "../store/count/selectors";
 
-const Counter = ({count, increment, decrement}) => (
+const Counter = ({count}) => (
     <div className="card counter">
         <div className="card-content count">
 
@@ -15,10 +13,10 @@ const Counter = ({count, increment, decrement}) => (
 
             <div className="row">
                 <div className="col s6">
-                    <IncrementButton increment={increment}/>
+                    <IncrementButton/>
                 </div>
                 <div className="col s6">
-                    <DecrementButton decrement={decrement}/>
+                    <DecrementButton/>
                 </div>
             </div>
 
@@ -26,12 +24,4 @@ const Counter = ({count, increment, decrement}) => (
     </div>
 );
 
-const connector = connect(
-    (state) => ({
-        count: getCount(state)
-    })
-);
-
-const ConnectedCounter = connector(Counter);
-
-export default ConnectedCounter;
+export default Counter;
